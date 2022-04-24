@@ -1,22 +1,22 @@
 .slider {
   position: relative;
   display: flex;
-  height: 50hv;
+  height: 100hv;
   justify-content: center;
   align-items: center;
 }
 
 .image {
-  width: 1000px;
-  height: 600px;
+  width: 300px;
+  height: auto;
   border-radius: 10px;
 }
 
 .right-arrow {
   position: absolute;
-  top: 50%;
-  right: 2px;
-  font-size: 3rem;
+  top: 120px;
+  right: 32px;
+  font-size: 1rem;
   color: rose;
   z-index: 10;
   cursor: pointer;
@@ -25,11 +25,22 @@
 
 .left-arrow {
   position: absolute;
-  top: 50%;
-  right: 32px;
-  font-size: 3rem;
+  top: 120px;
+  left: 32px;
+  font-size: 1rem;
   columns: rose;
   z-index: 10;
   cursor: pointer;
   user-select: none;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
 }
